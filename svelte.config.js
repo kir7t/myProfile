@@ -11,8 +11,11 @@ const config = {
 			fallback: 'index.html' // すべてのリクエストを index.html にフォールバック
 		}),
 		paths: {
-            base: production ? '/myProfileTemplate-Svelte' : '',
-        }
+            base: production ? '/myProfile' : '',
+        },
+		alias: {
+			"$src": "src"
+		}
 	}
 };
 
