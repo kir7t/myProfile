@@ -19,7 +19,7 @@
     <nav class="nav-links {menuOpen ? 'open' : ''}">
         <a href="/about">Profile</a>
         <a href="/works">Works</a>
-        <a href="/contacts">Contacts</a>
+        <a href="/contact">Contact</a>
     </nav>
 </header>
 
@@ -37,7 +37,7 @@
         align-items: center;
         font-family: "Press Start 2P", DotGothic16, sans-serif;
         z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(5, 81, 188, 0.661);
         justify-content: space-between;
         padding: 0 20px;
     }

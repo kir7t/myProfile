@@ -1,27 +1,30 @@
-<div class="works">
-    <div class="The-boy">
-        <iframe 
-            width="320" 
-            height="180" 
-            src="https://embed.nicovideo.jp/watch/sm44677799?autoplay=0"
-            frameborder="0" 
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="container">
+    <h class="subject">Works</h>
+    <div class="works">
+        <div class="The-boy">
+            <iframe 
+                width="320" 
+                height="180" 
+                src="https://embed.nicovideo.jp/watch/sm44677799?autoplay=0"
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
-    <div class= "Seirei">
-        <iframe 
-            width="320" 
-            height="180" 
-            src="https://embed.nicovideo.jp/watch/sm43439730?autoplay=0"
-            frameborder="0" 
-            allowfullscreen>
-        </iframe>
+        <div class= "Seirei">
+            <iframe 
+                width="320" 
+                height="180" 
+                src="https://embed.nicovideo.jp/watch/sm43439730?autoplay=0"
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </div>
 
 <style>
-    .works {
+    .container {
         background-color: #a8cbff;
         border: 2px solid white;
         border-radius: 10px;
@@ -30,11 +33,17 @@
         width: 90%;
         margin: auto;
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .subject {
+        font-family: "Press Start 2P", DotGothic16, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
     }
 
     /* 各動画のデザイン */
@@ -48,9 +57,23 @@
     /* ✅ スマホ用レスポンシブ対応 (480px以下) */
     /* =============================== */
     @media (max-width: 480px) {
+        .container{
+            width: 80%;
+        }
+
         .works {
+            width: 80%;
+            display: flex;
             flex-direction: column;
+            justify-content: center; /* 縦方向の中央揃え */
+            align-items: center; /* 横方向の中央揃え */
             gap: 15px;
+        }
+
+        .subject {
+            font-size: 18px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
 
         .works iframe {
@@ -67,6 +90,12 @@
             gap: 15px;
         }
 
+        .subject {
+            font-size: 25px;
+            margin-top: 10px;
+            margin-bottom:  20px;
+        }
+
         .works iframe {
             width: 45%;
             height: 180px;
@@ -78,8 +107,14 @@
     /* =============================== */
     @media (min-width: 900px) {
         .works {
-            flex-wrap: nowrap;
-            gap: 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .subject {
+            font-size: 30px;
+            margin-top: 15px;
+            padding-bottom: 30px;
         }
 
         .works iframe {

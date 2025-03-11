@@ -1,6 +1,6 @@
 <div class="contacts">
-    <h class="gmail text-3xl text-gray-600">Gmail</h>
-    <p class="mail-adress text-2xl text-gray-600">nekosamadayo@gmail.com</p>
+    <h class="subject">Contact</h>
+    <p class="mail-adress">nekosamadayoo0@gmail.com</p>
 </div>
 
 <style>
@@ -22,9 +22,10 @@
     }
 
     /* Gmailタイトル */
-    .gmail {
+    .subject {
         font-size: 24px;
         font-weight: bold;
+        margin-top: 5px;
         margin-bottom: 10px;
     }
 
@@ -40,16 +41,18 @@
     /* =============================== */
     @media (max-width: 480px) {
         .contacts {
-            width: 95%;
+            max-width: 80%;
             padding: 15px;
         }
 
-        .gmail {
+        .subject {
             font-size: 18px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
 
         .mail-adress {
-            font-size: 14px;
+            font-size: 2px;
         }
     }
 
@@ -61,8 +64,10 @@
             width: 90%;
         }
 
-        .gmail {
+        .subject {
             font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         .mail-adress {
@@ -78,14 +83,14 @@
             max-width: 900px;
         }
 
-        .gmail {
+        .subject {
             font-size: 24px;
+            margin-top: 15px;
+            margin-bottom: 30px;
         }
 
         .mail-adress {
             font-size: 18px;
         }
     }
-
-
 </style>
