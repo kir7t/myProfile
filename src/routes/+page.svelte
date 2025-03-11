@@ -26,26 +26,31 @@
     </main>
 
     <div class="container">
-        <h class="subject">Profile</h>
-        
+        <div class="profile-header">
+            <h class="subject">Profile</h>
+            <div class="SNS">
+                <a href="https://x.com/usagidayo0" target="_blank">
+                    <img src="/x-logo.png" alt="X" class="x-icon">
+                </a>
+                <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
+                    <img src="/niconico-logo.png" alt="niconico" class="niconico-icon">
+                </a>
+                <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
+                    <img src="/youtube.png" alt="youtube" class="youtube-icon">
+                </a>
+            </div>
+        </div>
+
         <div class="profile">
             <div class="icon">
                 <img src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" alt="Nekosama" class="nekosama-icon">
 
             </div>
-            <p class="bio text-gray-600">Garagebandを用いて曲を作ります</p>
-        </div>
 
-        <div class="SNS">
-            <a href="https://x.com/usagidayo0" target="_blank">
-                <img src="/x-logo.png" alt="X" class="x-icon">
-            </a>
-            <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
-                <img src="/niconico-logo.png" alt="niconico" class="niconico-icon">
-            </a>
-            <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
-                <img src="/youtube.png" alt="youtube" class="youtube-icon">
-            </a>
+            <div class="profile-text">
+                <h class="name">Nekosama</h>
+                <p class="bio text-gray-600">Composer</p>
+            </div>
         </div>
     </div>
 
@@ -74,10 +79,24 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
     .subject {
         font-family: "Press Start 2P", DotGothic16, sans-serif;
         font-weight: bold;
         font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .name {
+        font-family: "Press Start 2P", DotGothic16, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
         margin-top: 10px;
         display: block;
     }
@@ -90,12 +109,18 @@
         width: 100%;
     }
 
+    .profile-text {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: flex-start;
+    }
+
     /* アイコンのデザイン */
     .nekosama-icon {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        margin-left: 30%;
+        margin-left: 80%;
         object-fit: cover;
     }
 
@@ -165,6 +190,14 @@
             text-align: center;
         }
 
+        .profile-text {
+            margin-right: 40px;
+        }
+
+        .name {
+            font-size: 20px;
+        }
+
         .nekosama-icon {
             width: 100px;
             height: 100px;
@@ -213,6 +246,14 @@
             text-align: center;
         }
 
+        .profile-text {
+            margin-right: 60px;
+        }
+
+        .name {
+            font-size: 25px;
+        }
+
         .nekosama-icon {
             width: 110px;
             height: 110px;
@@ -256,8 +297,18 @@
         }
 
         .profile {
+            margin-top: 20px;
+            margin-bottom: 20px;
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        .profile-text {
+            margin-right: 25%;
+        }
+
+        .name {
+            font-size: 30px;
         }
 
         .nekosama-icon {
@@ -272,11 +323,12 @@
 
         .SNS {
             gap: 20px;
+            margin-right: 15px;
         }
 
         .x-icon, .niconico-icon, .youtube-icon {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
         }
 
         .blank {

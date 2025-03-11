@@ -31,7 +31,7 @@
         left: 0;
         width: 100%;
         height: 80px;
-        background-color: #005ce6;
+        background-color: #174a97;
         color: #ffffff;
         display: flex;
         align-items: center;
