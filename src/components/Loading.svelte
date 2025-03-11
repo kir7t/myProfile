@@ -17,11 +17,12 @@
         justify-content: center;
         align-items: center;
         height: 100vh; /* 画面全体をカバー */
+        background-color: rgba(0, 0, 0, 0.5);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 9999;
+        z-index: -1; /* 背景を後ろのレイヤーへ */
     }
 
     .loading-icon {
@@ -32,6 +33,7 @@
     }
 
     .loading-script {
+        position: relative;
         display: flex;
         margin-top: 470px;
         justify-content: center;
