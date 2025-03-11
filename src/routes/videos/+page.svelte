@@ -35,7 +35,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -44,6 +43,11 @@
         font-weight: bold;
         font-size: 18px;
         margin-top: 10px;
+    }
+
+    .works {
+        justify-content: center;
+        align-items: center;
     }
 
     /* 各動画のデザイン */
@@ -93,7 +97,8 @@
         .subject {
             font-size: 25px;
             margin-top: 10px;
-            margin-bottom:  20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
         }
 
         .works iframe {
@@ -115,6 +120,7 @@
             font-size: 30px;
             margin-top: 15px;
             padding-bottom: 30px;
+            margin-left: 10px;
         }
 
         .works iframe {
@@ -122,5 +128,4 @@
             height: 180px;
         }
     }
-
 </style>

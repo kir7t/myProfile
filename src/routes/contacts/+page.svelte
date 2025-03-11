@@ -15,9 +15,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         font-family: "Press Start 2P", DotGothic16, sans-serif;
-        text-align: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -34,6 +32,7 @@
         font-size: 18px;
         word-break: break-all; /* メールアドレスが枠からはみ出さないように */
         color: #333;
+        text-align: center;
     }
 
     /* =============================== */
@@ -46,9 +45,8 @@
         }
 
         .subject {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 5px;
-            margin-bottom: 10px;
         }
 
         .mail-adress {
@@ -65,9 +63,9 @@
         }
 
         .subject {
-            font-size: 20px;
+            font-size: 25px;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-left: 10px;
         }
 
         .mail-adress {
@@ -84,9 +82,9 @@
         }
 
         .subject {
-            font-size: 24px;
+            font-size: 30px;
             margin-top: 15px;
-            margin-bottom: 30px;
+            margin-left: 10px;
         }
 
         .mail-adress {

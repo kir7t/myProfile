@@ -2,44 +2,62 @@
     import Header from '$src/components/Header.svelte';
     import Videos from '$src/routes/videos/+page.svelte';
     import Contact from '$src/routes/contacts/+page.svelte';
+
+    //
+    import Loading from '$src/components/Loading.svelte'
+    import { onMount } from 'svelte';
+
+    let isLoading = true;
+
+    onMount(() => {
+        // 一定時間後にローディングを解除（またはデータの取得が完了したら解除）
+        setTimeout(() => {
+            isLoading = false;
+        }, 2000); // 2秒間ローディングを表示
+    });
+    //
 </script>
 
-<Header />
-<main>
-</main>
+<Loading {isLoading} />
 
-<div class="container">
-    <h class="subject">Profile</h>
-    
-    <div class="profile">
-        <div class="icon">
-            <img src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" alt="Nekosama" class="nekosama-icon">
+{#if !isLoading}
+    <Header />
+    <main>
+    </main>
 
+    <div class="container">
+        <h class="subject">Profile</h>
+        
+        <div class="profile">
+            <div class="icon">
+                <img src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" alt="Nekosama" class="nekosama-icon">
+
+            </div>
+            <p class="bio text-gray-600">Garagebandを用いて曲を作ります</p>
         </div>
-        <p class="bio text-gray-600">Garagebandを用いて曲を作ります</p>
+
+        <div class="SNS">
+            <a href="https://x.com/usagidayo0" target="_blank">
+                <img src="/x-logo.png" alt="X" class="x-icon">
+            </a>
+            <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
+                <img src="/niconico-logo.png" alt="niconico" class="niconico-icon">
+            </a>
+            <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
+                <img src="/youtube.png" alt="youtube" class="youtube-icon">
+            </a>
+        </div>
     </div>
 
-    <div class="SNS">
-        <a href="https://x.com/usagidayo0" target="_blank">
-            <img src="/x-logo.png" alt="X" class="x-icon">
-        </a>
-        <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
-            <img src="/niconico-logo.png" alt="niconico" class="niconico-icon">
-        </a>
-        <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
-            <img src="/youtube.png" alt="youtube" class="youtube-icon">
-        </a>
+    <div class="blank">
     </div>
-</div>
-
-<div class="blank">
-</div>
-<Videos />
-<div class="blank">
-</div>
-<Contact />
-<div class="blank">
-</div>
+    <Videos />
+    <div class="blank">
+    </div>
+    <Contact />
+    <div class="blank">
+    </div>
+{/if}
 
 <style>
     .container {
@@ -187,6 +205,7 @@
             font-size: 30px;
             margin-top: 15px;
             margin-bottom: 15px;
+            margin-left: 10px;
         }
 
         .profile {
@@ -233,6 +252,7 @@
             font-size: 30px;
             margin-top: 20px;
             margin-bottom: 20px;
+            margin-left: 10px;
         }
 
         .profile {
