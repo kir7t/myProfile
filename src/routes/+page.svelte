@@ -3,7 +3,7 @@
     import Videos from '$src/routes/videos/+page.svelte';
     import Contact from '$src/routes/contacts/+page.svelte';
 
-    //
+    //Loading
     import Loading from '$src/components/Loading.svelte'
     import { onMount } from 'svelte';
 
@@ -13,7 +13,7 @@
         // 一定時間後にローディングを解除（またはデータの取得が完了したら解除）
         setTimeout(() => {
             isLoading = false;
-        }, 2000); // 2秒間ローディングを表示
+        }, 1000); // 2秒間ローディングを表示
     });
     //
 </script>
@@ -27,7 +27,7 @@
 
     <div class="container">
         <div class="profile-header">
-            <h class="subject">Profile</h>
+            <h class="subject" >Profile</h>
             <div class="SNS">
                 <a href="https://x.com/usagidayo0" target="_blank">
                     <img src="/x-logo.png" alt="X" class="x-icon">
@@ -91,6 +91,11 @@
         font-weight: bold;
         font-size: 18px;
         margin-top: 10px;
+    }
+
+    /* スムーズスクロールを適用 */
+    html {
+        scroll-behavior: smooth;
     }
 
     .name {

@@ -17,9 +17,9 @@
     </button>
 
     <nav class="nav-links {menuOpen ? 'open' : ''}">
-        <a href="/about">Profile</a>
-        <a href="/works">Works</a>
-        <a href="/contact">Contact</a>
+        <a href="#">Profile</a>
+        <a href="#works-section">Works</a>
+        <a href="#contacts-section">Contact</a>
     </nav>
 </header>
 

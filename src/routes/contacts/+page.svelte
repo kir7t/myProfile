@@ -1,5 +1,5 @@
 <div class="contacts">
-    <h class="subject">Contact</h>
+    <h class="subject" id="contacts-section">Contact</h>
     <p class="mail-adress">nekosamadayoo0@gmail.com</p>
 </div>
 
