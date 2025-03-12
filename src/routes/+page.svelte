@@ -16,6 +16,15 @@
         }, 1000); // 2秒間ローディングを表示
     });
     //
+
+    //画像追加
+    let images = []; // 画像を格納する配列
+
+    function addImage() {
+        // static 内の "niku.jpg" を追加
+        images = [...images, "/niku.png"];
+    }
+    //
 </script>
 
 <Loading {isLoading} />
@@ -30,20 +39,27 @@
             <h class="subject" >Profile</h>
             <div class="SNS">
                 <a href="https://x.com/usagidayo0" target="_blank">
-                    <img src="/x-logo.png" alt="X" class="x-icon">
+                    <img src="./x-logo.png" alt="X" class="x-icon">
                 </a>
                 <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
-                    <img src="/niconico-logo.png" alt="niconico" class="niconico-icon">
+                    <img src="./niconico-logo.png" alt="niconico" class="niconico-icon">
                 </a>
                 <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
-                    <img src="/youtube.png" alt="youtube" class="youtube-icon">
+                    <img src="./youtube.png" alt="youtube" class="youtube-icon">
                 </a>
             </div>
         </div>
 
         <div class="profile">
             <div class="icon">
-                <img src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" alt="Nekosama" class="nekosama-icon">
+                
+                <img 
+                    src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" 
+                    alt="Nekosama" 
+                    class="nekosama-icon"
+                    on:click={addImage} 
+                />
+
 
             </div>
 
@@ -51,6 +67,14 @@
                 <h class="name">Nekosama</h>
                 <p class="bio text-gray-600">Composer</p>
             </div>
+
+
+            
+        </div>
+        <div class="gallery">
+            {#each images as imgSrc}
+                <img src={imgSrc} alt="追加された画像" class="added-image">
+            {/each}
         </div>
     </div>
 
@@ -118,6 +142,21 @@
         display: flex;
         flex-direction: column; /* 縦並び */
         align-items: flex-start;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .added-image {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     /* アイコンのデザイン */
