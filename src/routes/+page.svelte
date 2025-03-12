@@ -22,7 +22,7 @@
 
     function addImage() {
         // static 内の "niku.jpg" を追加
-        images = [...images, "/niku.png"];
+        images = [...images, "./niku.png"];
     }
     //
 </script>
@@ -125,7 +125,6 @@
     .name {
         font-family: "Press Start 2P", DotGothic16, sans-serif;
         font-weight: bold;
-        font-size: 30px;
         margin-top: 10px;
         display: block;
     }
@@ -141,7 +140,6 @@
     .profile-text {
         display: flex;
         flex-direction: column; /* 縦並び */
-        align-items: flex-start;
     }
 
     .gallery {
@@ -235,7 +233,7 @@
         }
 
         .profile-text {
-            margin-right: 40px;
+            text-align: center;
         }
 
         .name {
@@ -260,8 +258,8 @@
         }
 
         .x-icon, .niconico-icon, .youtube-icon {
-            width: 35px;
-            height: 35px;
+            width: 10px;
+            height: 10px;
         }
 
         .blank {
@@ -291,6 +289,7 @@
         }
 
         .profile-text {
+            align-items: flex-start;
             margin-right: 60px;
         }
 
@@ -348,6 +347,7 @@
         }
 
         .profile-text {
+            align-items: flex-start;
             margin-right: 25%;
         }
 
