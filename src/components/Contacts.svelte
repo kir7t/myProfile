@@ -1,7 +1,7 @@
 <div class="container">
     <div class="contacts">
         <h class="subject text-xl md:text-2xl lg:text-3xl" id="contacts-section">Contact</h>
-        <p class="mail-adress text-center">nekosamadayoo0@gmail.com</p>
+        <p class="mail-adress text-center text-xs md:text-base lg:text-xl">nekosamadayoo0@gmail.com</p>
     </div>
 </div>
 
@@ -23,6 +23,7 @@
         font-weight: bold;
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-left: 10px;
     }
 
     /* メールアドレス */
@@ -52,8 +53,12 @@
     /* ✅ タブレット用レスポンシブ対応 (768px以下) */
     /* =============================== */
     @media (max-width: 768px) {
+        .subject {
+            margin-left: 0;
+        }
+        
         .mail-adress {
-            font-size: 16px;
+            justify-content: space-between;
         }
     }
 
@@ -63,10 +68,6 @@
     @media (min-width: 900px) {
         .contacts {
             max-width: 900px;
-        }
-
-        .mail-adress {
-            font-size: 18px;
         }
     }
 </style>

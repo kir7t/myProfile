@@ -37,7 +37,6 @@
     }
 
     .subject {
-        font-family: "Press Start 2P", DotGothic16, sans-serif;
         font-weight: bold;
         margin-top: 10px;
     }
@@ -90,7 +89,7 @@
         .subject {
             margin-top: 10px;
             margin-bottom: 20px;
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
 

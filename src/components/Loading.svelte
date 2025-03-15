@@ -39,7 +39,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-family: "Press Start 2P", DotGothic16, sans-serif;
         color: #ffffff;
         font-size: 20px;
     }
@@ -48,22 +47,4 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
-
-    /* @media (max-width: 480px) {
-        .loading-icon{
-            margin-bottom: 40px;
-        }
-
-        .loading-script {
-            margin-top: 510px;
-        }
-    }    
-
-    @media (max-width: 768px) {
-
-
-        .loading-script {
-            margin-top: 800px;
-        }
-    }    */
 </style>
