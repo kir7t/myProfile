@@ -7,16 +7,16 @@
 </script>
 
 <header class="header">
-    <div class="title">
+    <div class="title text-3xl md:text-4xl lg:text-5xl  flex justify-center items-center">
         <h1>Nekosama</h1>
     </div>
 
     <!-- ハンバーガーメニューのボタン -->
-    <button class="menu-toggle" on:click={toggleMenu} aria-label="Toggle navigation">
+    <span class="menu-toggle text-6xl flex justify-center items-center relative bottom-1" on:click={toggleMenu} aria-label="Toggle navigation">
         ☰
-    </button>
+    </span>
 
-    <nav class="nav-links {menuOpen ? 'open' : ''}">
+    <nav class="nav-links {menuOpen ? 'open' : ''} md:text-lg lg:text-2xl flex justify-center items-center">
         <a href="#">Profile</a>
         <a href="#works-section">Works</a>
         <a href="#contacts-section">Contact</a>
@@ -34,29 +34,21 @@
         background-color: #174a97;
         color: #ffffff;
         display: flex;
-        align-items: center;
-        font-family: "Press Start 2P", DotGothic16, sans-serif;
         z-index: 1000;
         box-shadow: 0 4px 10px rgba(5, 81, 188, 0.661);
         justify-content: space-between;
         padding: 0 20px;
     }
 
-    .title {
-        font-size: 1.5rem;
-    }
-
     /* 通常のナビゲーション */
     .nav-links {
         display: flex;
-        gap: 30px;
-        margin-right: 5%;
+        gap: 20px;
     }
 
     .nav-links a {
         color: #ffffff;
         text-decoration: none;
-        font-size: 1rem;
     }
 
     .nav-links a:hover {
@@ -69,7 +61,6 @@
         display: none; /* PCでは非表示 */
         background: none;
         border: none;
-        font-size: 2rem;
         color: white;
         cursor: pointer;
     }

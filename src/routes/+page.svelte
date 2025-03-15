@@ -15,7 +15,6 @@
             isLoading = false;
         }, 1000); // 2秒間ローディングを表示
     });
-    //
 
     //画像追加
     let images = []; // 画像を格納する配列
@@ -32,60 +31,56 @@
 {#if !isLoading}
     <Header />
     <main>
-    </main>
-
-    <div class="container">
-        <div class="profile-header">
-            <h class="subject" >Profile</h>
-            <div class="SNS">
-                <a href="https://x.com/usagidayo0" target="_blank">
-                    <img src="./x-logo.png" alt="X" class="x-icon">
-                </a>
-                <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
-                    <img src="./niconico-logo.png" alt="niconico" class="niconico-icon">
-                </a>
-                <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
-                    <img src="./youtube.png" alt="youtube" class="youtube-icon">
-                </a>
+        <div class="container">
+            <div class="profile-header">
+                <h class="subject" >Profile</h>
+                <div class="SNS">
+                    <a href="https://x.com/usagidayo0" target="_blank">
+                        <img src="./x-logo.png" alt="X" class="x-icon">
+                    </a>
+                    <a href="https://www.nicovideo.jp/user/132226324" target="_blank">
+                        <img src="./niconico-logo.png" alt="niconico" class="niconico-icon">
+                    </a>
+                    <a href="https://youtube.com/@nekosamadayo?si=4rq6d8trqM3h9VYR" target="_blank">
+                        <img src="./youtube.png" alt="youtube" class="youtube-icon">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="profile">
-            <div class="icon">
+            <div class="profile">
+                <div class="icon">
+                    <img 
+                        src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" 
+                        alt="Nekosama" 
+                        class="nekosama-icon"
+                        on:click={addImage} 
+                    />
+                </div>
+
+                <div class="profile-text">
+                    <h class="name">Nekosama</h>
+                    <p class="bio text-gray-600">Composer</p>
+                </div>
+
+
                 
-                <img 
-                    src="{import.meta.env.BASE_URL + 'Nekosama-icon.jpg'}" 
-                    alt="Nekosama" 
-                    class="nekosama-icon"
-                    on:click={addImage} 
-                />
-
-
             </div>
-
-            <div class="profile-text">
-                <h class="name">Nekosama</h>
-                <p class="bio text-gray-600">Composer</p>
+            <div class="gallery">
+                {#each images as imgSrc}
+                    <img src={imgSrc} alt="追加された画像" class="added-image">
+                {/each}
             </div>
-
-
-            
         </div>
-        <div class="gallery">
-            {#each images as imgSrc}
-                <img src={imgSrc} alt="追加された画像" class="added-image">
-            {/each}
-        </div>
-    </div>
 
-    <div class="blank">
-    </div>
-    <Videos />
-    <div class="blank">
-    </div>
-    <Contact />
-    <div class="blank">
-    </div>
+        <div class="blank">
+        </div>
+        <Videos />
+        <div class="blank">
+        </div>
+        <Contact />
+        <div class="blank">
+        </div>
+    </main>
 {/if}
 
 <style>
