@@ -7,7 +7,7 @@
 </script>
 
 <header class="header">
-    <div class="title text-3xl md:text-4xl lg:text-5xl  flex justify-center items-center">
+    <div class="title text-3xl md:text-4xl lg:text-5xl flex justify-center items-center">
         <h1>Nekosama</h1>
     </div>
 

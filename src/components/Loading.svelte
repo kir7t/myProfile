@@ -35,7 +35,7 @@
     .loading-script {
         position: relative;
         display: flex;
-        margin-top: 470px;
+        margin-top: 510px;
         justify-content: center;
         align-items: center;
         text-align: center;

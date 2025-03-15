@@ -1,21 +1,20 @@
-<div class="contacts">
-    <h class="subject" id="contacts-section">Contact</h>
-    <p class="mail-adress">nekosamadayoo0@gmail.com</p>
+<div class="container">
+    <div class="contacts">
+        <h class="subject text-xl md:text-2xl lg:text-3xl" id="contacts-section">Contact</h>
+        <p class="mail-adress text-center">nekosamadayoo0@gmail.com</p>
+    </div>
 </div>
 
 <style>
-    .contacts {
+    .container {
         background-color: #a8cbff;
         border: 2px solid white;
         border-radius: 10px;
         padding: 20px;
         max-width: 900px;
-        width: 90%;
-        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-family: "Press Start 2P", DotGothic16, sans-serif;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -29,10 +28,8 @@
 
     /* メールアドレス */
     .mail-adress {
-        font-size: 18px;
         word-break: break-all; /* メールアドレスが枠からはみ出さないように */
         color: #333;
-        text-align: center;
     }
 
     /* =============================== */
@@ -40,7 +37,6 @@
     /* =============================== */
     @media (max-width: 480px) {
         .contacts {
-            max-width: 80%;
             padding: 15px;
         }
 
@@ -58,10 +54,6 @@
     /* ✅ タブレット用レスポンシブ対応 (768px以下) */
     /* =============================== */
     @media (max-width: 768px) {
-        .contacts {
-            width: 90%;
-        }
-
         .subject {
             font-size: 25px;
             margin-top: 10px;

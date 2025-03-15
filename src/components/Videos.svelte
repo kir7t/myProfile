@@ -1,5 +1,5 @@
 <div class="container">
-    <h class="subject" id="works-section">Works</h>
+    <h class="subject text-xl md:text-2xl lg:text-3xl" id="works-section">Works</h>
     <div class="works">
         <div class="The-boy">
             <iframe 
@@ -30,8 +30,6 @@
         border-radius: 10px;
         padding: 20px;
         max-width: 900px;
-        width: 90%;
-        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,12 +59,7 @@
     /* ✅ スマホ用レスポンシブ対応 (480px以下) */
     /* =============================== */
     @media (max-width: 480px) {
-        .container{
-            width: 80%;
-        }
-
         .works {
-            width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center; /* 縦方向の中央揃え */
