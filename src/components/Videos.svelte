@@ -1,7 +1,7 @@
 <div class="container">
     <h class="subject text-xl md:text-2xl lg:text-3xl" id="works-section">Works</h>
     <div class="works">
-        <div class="The-boy">
+        <div class="the-boy">
             <iframe 
                 width="320" 
                 height="180" 
@@ -39,7 +39,6 @@
     .subject {
         font-family: "Press Start 2P", DotGothic16, sans-serif;
         font-weight: bold;
-        font-size: 18px;
         margin-top: 10px;
     }
 
@@ -58,17 +57,16 @@
     /* =============================== */
     /* ✅ スマホ用レスポンシブ対応 (480px以下) */
     /* =============================== */
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
         .works {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 縦方向の中央揃え */
-            align-items: center; /* 横方向の中央揃え */
+            justify-content: center; 
+            align-items: center; 
             gap: 15px;
         }
 
         .subject {
-            font-size: 18px;
             margin-top: 5px;
             margin-bottom: 10px;
         }
@@ -77,26 +75,22 @@
             width: 100%;
             height: 180px;
         }
-    }
+    } */
 
     /* =============================== */
     /* ✅ タブレット用レスポンシブ対応 (768px以下) */
     /* =============================== */
     @media (max-width: 768px) {
         .works {
-            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .subject {
-            font-size: 25px;
             margin-top: 10px;
             margin-bottom: 20px;
             margin-left: 10px;
-        }
-
-        .works iframe {
-            width: 45%;
-            height: 180px;
         }
     }
 
@@ -114,11 +108,6 @@
             margin-top: 15px;
             padding-bottom: 30px;
             margin-left: 10px;
-        }
-
-        .works iframe {
-            width: 320px;
-            height: 180px;
         }
     }
 </style>
