@@ -20,9 +20,8 @@
 
     /* Gmailタイトル */
     .subject {
-        font-size: 24px;
         font-weight: bold;
-        margin-top: 5px;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
 
@@ -35,31 +34,24 @@
     /* =============================== */
     /* ✅ スマホ用レスポンシブ対応 (480px以下) */
     /* =============================== */
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
         .contacts {
             padding: 15px;
         }
 
         .subject {
-            font-size: 20px;
             margin-top: 5px;
         }
 
         .mail-adress {
             font-size: 2px;
         }
-    }
+    } */
 
     /* =============================== */
     /* ✅ タブレット用レスポンシブ対応 (768px以下) */
     /* =============================== */
     @media (max-width: 768px) {
-        .subject {
-            font-size: 25px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-
         .mail-adress {
             font-size: 16px;
         }
@@ -71,12 +63,6 @@
     @media (min-width: 900px) {
         .contacts {
             max-width: 900px;
-        }
-
-        .subject {
-            font-size: 30px;
-            margin-top: 15px;
-            margin-left: 10px;
         }
 
         .mail-adress {

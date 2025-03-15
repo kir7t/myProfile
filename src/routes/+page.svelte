@@ -7,7 +7,7 @@
     import Contact from '$src/components/Contacts.svelte';
     import Loading from '$src/components/Loading.svelte'
 
-    let isLoading = false;
+    let isLoading = true;
 
     onMount(() => {
         // 一定時間後にローディングを解除（またはデータの取得が完了したら解除）
